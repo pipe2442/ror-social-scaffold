@@ -1,16 +1,15 @@
 class FriendshipsController < ApplicationController
-  def new
-    @friendship = Friendship.new
-  end
 
   def create
-    @friendship = Friendship.new(user_id: current_user, friend_id: params[:friend_id], confirmed: false)
+    @friendship = Friendship.new(friendships_params)
+    @friendship.friend_id = params[:user_id]
+
     redirect_to root_path if @friendship.save
   end
 
   private
 
   def friendships_params
-    params.require(:friendship).permit(:user_id, :friend_id, :confirmed)
+    params.require(:friendship).permit(:user_id, :confirmed)
   end
 end
