@@ -1,2 +1,14 @@
-<h1>Friendships#new</h1>
-<p>Find me in app/views/friendships/new.html.erb</p>
+<div>
+  <%= form_for @friendship do |f| %>
+    <%= f.label :user_id%>
+    <%= f.text_field :user_id, value: current_user%>
+
+    <%= f.label :friend_id%>
+    <%= f.text_field :friend_id%>
+
+    <%= f.label :confirmed %>
+    <%= f.text_field :confirmed, value: false %>
+
+    <%= f.submit%>
+  <% end %>
+</div>
