@@ -15,4 +15,28 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+
+
+  
+
+  def display_users(user)
+    counter = 0
+    list_item = ''
+    
+    list_item = content_tag(:li) do
+      " #{user[counter].name}"
+    end     
+    list_item
+  
+  end
+
+  def display_friends(user)
+    arr = []
+    user.each { |n| arr << n.name }
+    arr.to_sentence
+  end
+
+
+  
 end

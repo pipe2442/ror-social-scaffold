@@ -9,6 +9,16 @@
 </section>
 
 
+
+<section class="users-section">
+  <h2><%= @user.name %> Friends <br></h2>
+  <ul class="users-list">
+    <%= render @user.friends %>
+  </ul>
+</section>
+
+
+
 <div>
   
   <%= form_for(@user.friendships.new, url: user_friendships_path(@user)) do |form| %>
