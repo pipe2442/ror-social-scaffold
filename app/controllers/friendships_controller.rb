@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
 
   def show
     @friendship = Friendship.find(params[:id])
-  end
+  end 
 
   def create
     @friendship = Friendship.new(friendships_params)
@@ -12,11 +12,15 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = Friendship.find(params[:id])
-    @friendship.confirm_friend
-    redirect_to root_path
-    
+    @friendship = Friendship.update(confirmed: true)
+    redirect_to root_path 
   end
+
+  def destroy
+    Friendship.find(params[:id])
+    @friendship = Friendship.destroy
+    redirect_to root_path 
+  end 
 
   private
 

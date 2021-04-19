@@ -17,8 +17,19 @@ module ApplicationHelper
   end
 
 
+  def verify_friendship(friend_id)
+    Friendship.where('(user_id = ? and friend_id = ?) OR (user_id = ? and friend_id = ?)',
+    current_user.id, friend_id, friend_id, current_user.id).first
+  end
+
+
   
 
+
+
+
+
+  
   def display_users(user)
     counter = 0
     list_item = ''
