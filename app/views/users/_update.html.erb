@@ -1,0 +1,7 @@
+<div>
+  <%= form_for(@user.friendships.update, url: user_friendships_path(@user)) do |form| %>
+    <%= form.hidden_field :user_id, value: current_user.id%>
+    <%= form.hidden_field :confirmed, value: true %>
+    <%= form.submit%>
+  <% end %>
+</div>

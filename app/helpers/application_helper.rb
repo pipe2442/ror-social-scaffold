@@ -17,7 +17,6 @@ module ApplicationHelper
   end
 
 
-
   
 
   def display_users(user)
