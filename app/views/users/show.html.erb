@@ -21,7 +21,7 @@
 <% if @user == current_user %>
   <% @user.friend_requests.each do |user| %> 
     <%= button_to "Accept #{user.name} request", user_friendship_path(verify_friendship(user)), method: :put %>
-    <%= button_to "Delete #{user.name} request", user_friendship_path(verify_friendship(user)), method: :delete %>
+    <%= button_to "Delete #{user.name} request", friendship_path(verify_friendship(user)), method: :delete %>
   <% end %>
 <% end %>
 

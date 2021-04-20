@@ -17,8 +17,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    Friendship.find(params[:id])
-    @friendship = Friendship.destroy
+    @friendship = Friendship.find(params[:id])
+    Friendship.destroy(@friendship.id)
     redirect_to root_path 
   end 
 
@@ -27,4 +27,5 @@ class FriendshipsController < ApplicationController
   def friendships_params
     params.require(:friendship).permit(:user_id, :confirmed)
   end
+
 end

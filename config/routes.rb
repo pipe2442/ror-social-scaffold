@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   devise_for :users
+  
+  put '/users/:id/friendships/:id', to: 'friendships#delete', as: 'friendship'
 
   resources :users, only: [:index, :show] do
     resources :friendships
