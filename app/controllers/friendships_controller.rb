@@ -5,9 +5,7 @@ class FriendshipsController < ApplicationController
   end 
 
   def create
-    @friendship = Friendship.new(friendships_params)
-    @friendship.friend_id = params[:user_id]
-
+    @friendship = current_user.friendships.create(friend_id: params[:user_id], confirmed: false)
     redirect_to root_path if @friendship.save
   end
 
