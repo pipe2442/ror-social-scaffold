@@ -6,13 +6,13 @@ class FriendshipsController < ApplicationController
 
   def create
     @friendship = current_user.friendships.create(friend_id: params[:user_id], confirmed: false)
-    redirect_to root_path if @friendship.save
+    redirect_to users_path if @friendship.save
   end
 
   def update
     @friendship = Friendship.find(params[:id])
     @friendship.confirm_friend
-    redirect_to root_path 
+    redirect_to current_user
   end
 
   def delete
