@@ -4,7 +4,6 @@ class Friendship < ApplicationRecord
 
   def confirm_friend
     update_attribute(:confirmed, true)
-  
   end
 end
 
