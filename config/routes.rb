@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  put '/users/:id/friendships/:id', to: 'friendships#delete', as: 'friendship'
+  
+  delete '/users/:id/friendships/:id', to: 'friendships#delete', as: 'friendship'
 
   resources :users, only: [:index, :show] do
     resources :friendships

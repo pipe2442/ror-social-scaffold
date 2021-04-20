@@ -16,12 +16,12 @@ class FriendshipsController < ApplicationController
     redirect_to root_path 
   end
 
-  def destroy
+  def delete
     @friendship = Friendship.find(params[:id])
     Friendship.destroy(@friendship.id)
     redirect_to root_path 
   end 
-
+  
   private
 
   def friendships_params

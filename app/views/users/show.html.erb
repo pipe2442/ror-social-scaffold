@@ -16,15 +16,12 @@
   </ul>
 </section>
 
-
-
 <% if @user == current_user %>
   <% @user.friend_requests.each do |user| %> 
     <%= button_to "Accept #{user.name} request", user_friendship_path(verify_friendship(user)), method: :put %>
     <%= button_to "Delete #{user.name} request", friendship_path(verify_friendship(user)), method: :delete %>
   <% end %>
 <% end %>
-
 
 <section class="users-section">
   <h3><%= @user.name %> Pending friendship invitations: <br></h3>
