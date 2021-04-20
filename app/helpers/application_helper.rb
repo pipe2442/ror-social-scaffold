@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def menu_link_to(link_text, link_path)
     class_name = current_page?(link_path) ? 'menu-item active' : 'menu-item'
 
@@ -16,37 +17,19 @@ module ApplicationHelper
     end
   end
 
-
   def verify_friendship(friend_id)
     Friendship.where('(user_id = ? and friend_id = ?) OR (user_id = ? and friend_id = ?)',
     current_user.id, friend_id, friend_id, current_user.id).first
   end
-
-
   
-
-
-
-
-
-  
-  def display_users(user)
-    counter = 0
-    list_item = ''
-    
-    list_item = content_tag(:li) do
-      " #{user[counter].name}"
-    end     
-    list_item
-  
-  end
-
-  def display_friends(user)
-    arr = []
-    user.each { |n| arr << n.name }
-    arr.to_sentence
+  def add_friend(user)
+    if current_user.friend?(user)
+      tag.h3 'You are friends!'
+    else
+      button_to "Add Friend", user_friendships_path(user), method: :post 
+    end
   end
 
 
-  
+
 end

@@ -10,7 +10,8 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    @friendship = Friendship.update(confirmed: true)
+    @friendship = Friendship.find(params[:id])
+    @friendship.confirm_friend
     redirect_to root_path 
   end
 
@@ -19,11 +20,5 @@ class FriendshipsController < ApplicationController
     Friendship.destroy(@friendship.id)
     redirect_to root_path 
   end 
-  
-  private
-
-  def friendships_params
-    params.require(:friendship).permit(:user_id, :confirmed)
-  end
 
 end

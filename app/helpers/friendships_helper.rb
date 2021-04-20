@@ -1,6 +1,3 @@
 module FriendshipsHelper
-
-
-
 end
 
