@@ -4,5 +4,13 @@
   <%= add_friend(user) %>
   <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
   </span>
+  <% current_user.friend_requests.each do |request_user| %>
+    <% if user == request_user %>
+      <%= button_to "Accept", update_friendship_path(verify_friendship(user)), method: :put %>
+      <%= button_to "Reject", friendship_path(verify_friendship(user)), method: :delete %> 
+    <% end %>
+  <% end %> 
 </li>
+
+
 
