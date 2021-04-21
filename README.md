@@ -1,5 +1,5 @@
 # Scaffold for social media app with Ruby on Rails
-# Milestone 1
+# milestone5_v1
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
+ruby '2.7.2'
 Rails: 5.2.3
 Postgres: >=9.5
 

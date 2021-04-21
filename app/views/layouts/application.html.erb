@@ -20,6 +20,9 @@
       </div>
       <% if current_user %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+        <div class="menu-item">
+          <%= link_to "You are logged in as #{current_user.name}", current_user %>
+        </div>
       <% else %>
         <%= link_to 'Sign in', user_session_path %>
       <% end %>
