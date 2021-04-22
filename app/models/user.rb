@@ -11,7 +11,6 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
-  scope :current_user_friends, -> { where('user_id == ?', current_user.id) }
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
