@@ -19,13 +19,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-ruby '2.7.2'
-Rails: 5.2.3
-Postgres: >=9.5
+ruby 2.7.2
+Rails: >= 5.2.4
+Postgres: >= 9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
