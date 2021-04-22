@@ -1,16 +1,15 @@
 # Scaffold for social media app with Ruby on Rails
-# milestone5_v1
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This repo includes social network based project on Microverse curriculum.
 
 ## Built With
 
-- Ruby v2.7.0
+- Ruby v2.7.2
 - Ruby on Rails v5.2.4
 
 ## Live Demo
 
-TBA
+[Click here to check live version](https://social-network2442.herokuapp.com/)
 
 
 ## Getting Started
@@ -60,19 +59,28 @@ Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
-```
-    rpsec --format documentation
-```
+Run test with: 
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+```
+    rpsec 
+```
 
 ### Deployment
 
-TBA
+[Heroku](https://www.heroku.com)
 
 ## Authors
 
-TBA
+👤 **Luis Felipe Angulo Torres**
+
+- Github: [pipe2442](https://github.com/pipe2442)
+- Twitter: [@donCodigo_](https://twitter.com/donCodigo_)
+- Linkedin: [linkedin](https://www.linkedin.com/in/luis-felipe-angulo-torres-95098b139/)
+
+👤 **Pacifique Linjanja**
+- Github: [@pacyL2K19](https://github.com/pacyL2K19)
+- Twitter: [@PacifiqueLinja1](https://twitter.com/PacifiqueLinja1)
+- Linkedin: [Pacifique Linjanja](https://www.linkedin.com/in/pacifique-linjanja/)
 
 ## 🤝 Contributing
 
@@ -83,12 +91,3 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
-
